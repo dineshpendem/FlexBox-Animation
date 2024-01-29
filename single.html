@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astrome Exam</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .container2 {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .container1 {
+        width: 700px;
+        height: 225px;
+        border: 12.5px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: #000;
+      }
+      .box {
+        width: 140px;
+        height: 200px;
+        animation: none;
+      }
+      @keyframes boxAnimation1 {
+        0% {
+          height: 200px;
+        }
+        10% {
+          height: 180px;
+        }
+        20% {
+          height: 20px;
+        }
+        30% {
+          height: 40px;
+        }
+        50% {
+          height: 60px;
+        }
+        54% {
+          height: 50px;
+        }
+        58% {
+          height: 40px;
+        }
+        60% {
+          height: 20px;
+        }
+        65% {
+          height: 0px;
+        }
+        70% {
+          height: 50px;
+        }
+        80% {
+          height: 100px;
+        }
+        90% {
+          height: 150px;
+        }
+        100% {
+          height: 200px;
+        }
+      }
+
+      @keyframes boxAnimation2 {
+        0%,
+        100% {
+          height: 200px;
+        }
+        20% {
+          height: 80px;
+        }
+        30% {
+          height: 100px;
+        }
+        50% {
+          height: 180px;
+        }
+        60% {
+          height: 150px;
+        }
+        65% {
+          height: 100px;
+        }
+        70% {
+          height: 40px;
+        }
+        75% {
+          height: 45px;
+        }
+        80% {
+          height: 50px;
+        }
+        85% {
+          height: 40px;
+        }
+        90% {
+          height: 60px;
+        }
+        95% {
+          height: 130px;
+        }
+      }
+
+      @keyframes boxAnimation3 {
+        0%,
+        100% {
+          height: 200px;
+        }
+        20% {
+          height: 100px;
+        }
+        25% {
+          height: 80px;
+        }
+        30% {
+          height: 70px;
+        }
+        35% {
+          height: 80px;
+        }
+        40% {
+          height: 100px;
+        }
+        45% {
+          height: 60px;
+        }
+        50% {
+          height: 40px;
+        }
+        60% {
+          height: 20px;
+        }
+        65% {
+          height: 0px;
+        }
+        70% {
+          height: 20px;
+        }
+        80% {
+          height: 100px;
+        }
+        90% {
+          height: 140px;
+        }
+      }
+
+      @keyframes boxAnimation4 {
+        0%,
+        100% {
+          height: 200px;
+        }
+        20% {
+          height: 140px;
+        }
+
+        30% {
+          height: 70px;
+        }
+        35% {
+          height: 60px;
+        }
+        40% {
+          height: 50px;
+        }
+        45% {
+          height: 80px;
+        }
+        50% {
+          height: 120px;
+        }
+        60% {
+          height: 50px;
+        }
+        65% {
+          height: 10px;
+        }
+
+        70% {
+          height: 0px;
+        }
+        72% {
+          height: 5px;
+        }
+        74% {
+          height: 50px;
+        }
+
+        90% {
+          height: 160px;
+        }
+      }
+
+      @keyframes boxAnimation5 {
+        0% {
+          height: 200px;
+        }
+        20% {
+          height: 150px;
+        }
+        30% {
+          height: 120px;
+        }
+        35% {
+          height: 80px;
+        }
+        40% {
+          height: 40px;
+        }
+        42% {
+          height: 0px;
+        }
+        45% {
+          height: 30px;
+        }
+
+        50% {
+          height: 80px;
+        }
+        60% {
+          height: 50px;
+        }
+        70% {
+          height: 100px;
+        }
+        100% {
+          height: 200px;
+        }
+      }
+      .box1 {
+        background-color: #8652ba;
+        animation-name: boxAnimation1;
+        animation-timing-function: ease-in-out;
+      }
+      .box2 {
+        animation-name: boxAnimation2;
+        background-color: #dc4cac;
+      }
+
+      .box3 {
+        animation-name: boxAnimation3;
+        background-color: #fc548e;
+        animation-timing-function: ease-in-out;
+      }
+
+      .box4 {
+        animation-name: boxAnimation4;
+        background-color: #fc9258;
+      }
+
+      .box5 {
+        animation-name: boxAnimation5;
+        background-color: #fcc43c;
+      }
+      .button {
+        width: 120px;
+        height: 40px;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        caret-color: #000;
+        border: none;
+        border-radius: 2px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .start {
+        background-color: rgba(1, 120, 1, 0.795);
+        color: #fff;
+      }
+      .reset {
+        background-color: #8652ba;
+        color: #fff;
+      }
+      .stop {
+        background-color: #dc0505;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+      </div>
+      <div class="container2">
+        <button onclick="startAnimation()" class="button start">Start</button>
+        <button onclick="resetAnimation()" class="button reset">Reset</button>
+        <button onclick="stopAnimation()" class="button stop">Stop</button>
+      </div>
+    </div>
+    <script>
+      const boxes = document.querySelectorAll(".box");
+
+      function startAnimation() {
+        const time = ["5s", "5.5s", "5s", "5s", "5.5s"];
+        boxes.forEach((box, index) => {
+          box.style.animation = `boxAnimation${index + 1} ${
+            time[index]
+          } ease-in-out infinite`;
+        });
+      }
+
+      function resetAnimation() {
+        boxes.forEach((box) => {
+          const currentHeight = window.getComputedStyle(box).height;
+          box.style.animation = `resetAnimation 0.5s ease-out backwards`;
+          box.style.setProperty("--start-height", currentHeight);
+        });
+      }
+
+      function stopAnimation() {
+        boxes.forEach((box) => {
+          box.style.animationPlayState = "paused";
+        });
+      }
+      const styleSheet = document.styleSheets[0];
+      styleSheet.insertRule(
+        `
+    @keyframes resetAnimation {
+      0% {
+        height: var(--start-height);
+      }
+      100% {
+        height: 200px;
+      }
+    }
+  `,
+        styleSheet.cssRules.length
+      );
+    </script>
+  </body>
+</html>
